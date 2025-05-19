@@ -1,0 +1,156 @@
+{
+  "Li": {
+    "Nombre": "Litio",
+    "Nivel 1": "Sustancia simple",
+    "Nivel 2": "Monoatómica",
+    "Nivel 3": "Sustancia metálica",
+    "Nivel 4": "Alcalino"
+  },
+  "Na": {
+    "Nombre": "Sodio",
+    "Nivel 1": "Sustancia simple",
+    "Nivel 2": "Monoatómica",
+    "Nivel 3": "Sustancia metálica",
+    "Nivel 4": "Alcalino"
+  },
+  "Mg": {
+    "Nombre": "Magnesio",
+    "Nivel 1": "Sustancia simple",
+    "Nivel 2": "Monoatómica",
+    "Nivel 3": "Sustancia metálica",
+    "Nivel 4": "Alcalinotérreo"
+  },
+  "Ca": {
+    "Nombre": "Calcio",
+    "Nivel 1": "Sustancia simple",
+    "Nivel 2": "Monoatómica",
+    "Nivel 3": "Sustancia metálica",
+    "Nivel 4": "Alcalinotérreo"
+  },
+  "Fe": {
+    "Nombre": "Hierro",
+    "Nivel 1": "Sustancia simple",
+    "Nivel 2": "Monoatómica",
+    "Nivel 3": "Sustancia metálica",
+    "Nivel 4": "Metal de transición"
+  },
+  "Cu": {
+    "Nombre": "Cobre",
+    "Nivel 1": "Sustancia simple",
+    "Nivel 2": "Monoatómica",
+    "Nivel 3": "Sustancia metálica",
+    "Nivel 4": "Metal de transición"
+  },
+  "Al": {
+    "Nombre": "Aluminio",
+    "Nivel 1": "Sustancia simple",
+    "Nivel 2": "Monoatómica",
+    "Nivel 3": "Sustancia metálica",
+    "Nivel 4": "Metal de transición"
+  },
+  "C": {
+    "Nombre": "Grafito, Diamante, Grafeno",
+    "Nivel 1": "Sustancia simple",
+    "Nivel 2": "Monoatómica",
+    "Nivel 3": "Sustancia covalente reticular"
+  },
+  "He": {
+    "Nombre": "Helio",
+    "Nivel 1": "Sustancia simple",
+    "Nivel 2": "Monoatómica",
+    "Nivel 3": "Gas noble"
+  },
+  "Ne": {
+    "Nombre": "Neón",
+    "Nivel 1": "Sustancia simple",
+    "Nivel 2": "Monoatómica",
+    "Nivel 3": "Gas noble"
+  },
+  "Rn": {
+    "Nombre": "Radón",
+    "Nivel 1": "Sustancia simple",
+    "Nivel 2": "Monoatómica",
+    "Nivel 3": "Gas noble"
+  },
+  "F2": {
+    "Nombre": "Diflúor",
+    "Nivel 1": "Sustancia simple",
+    "Nivel 2": "Molecular",
+    "Nivel 3": "Diatómica",
+    "Nivel 4": "Halógenos"
+  },
+  "Cl2": {
+    "Nombre": "Dicloro",
+    "Nivel 1": "Sustancia simple",
+    "Nivel 2": "Molecular",
+    "Nivel 3": "Diatómica",
+    "Nivel 4": "Halógenos"
+  },
+  "Br2": {
+    "Nombre": "Dibromo",
+    "Nivel 1": "Sustancia simple",
+    "Nivel 2": "Molecular",
+    "Nivel 3": "Diatómica",
+    "Nivel 4": "Halógenos"
+  },
+  "I2": {
+    "Nombre": "Diyodo",
+    "Nivel 1": "Sustancia simple",
+    "Nivel 2": "Molecular",
+    "Nivel 3": "Diatómica",
+    "Nivel 4": "Halógenos"
+  },
+  "H2": {
+    "Nombre": "Dihidrógeno",
+    "Nivel 1": "Sustancia simple",
+    "Nivel 2": "Molecular",
+    "Nivel 3": "Diatómica"
+  },
+  "O2": {
+    "Nombre": "Dioxígeno",
+    "Nivel 1": "Sustancia simple",
+    "Nivel 2": "Molecular",
+    "Nivel 3": "Diatómica"
+  },
+  "N2": {
+    "Nombre": "Dinitrógeno",
+    "Nivel 1": "Sustancia simple",
+    "Nivel 2": "Molecular",
+    "Nivel 3": "Diatómica"
+  },
+  "O3": {
+    "Nombre": "Ozono",
+    "Nivel 1": "Sustancia simple",
+    "Nivel 2": "Molecular",
+    "Nivel 3": "Poliatómica",
+    "Nivel 4": "Alótropo del oxígeno"
+  },
+  "NaCl": {
+    "Nombre": "Cloruro de sodio",
+    "Nivel 1": "Compuesto",
+    "Nivel 2": "Inorgánico",
+    "Nivel 3": "Binario",
+    "Nivel 4": "Sales binarias"
+  },
+  "CaCl2": {
+    "Nombre": "Cloruro de calcio",
+    "Nivel 1": "Compuesto",
+    "Nivel 2": "Inorgánico",
+    "Nivel 3": "Binario",
+    "Nivel 4": "Sales binarias"
+  },
+  "KBr": {
+    "Nombre": "Bromuro de potasio",
+    "Nivel 1": "Compuesto",
+    "Nivel 2": "Inorgánico",
+    "Nivel 3": "Binario",
+    "Nivel 4": "Sales binarias"
+  },
+  "LiBr": {
+    "Nombre": "Bromuro de litio",
+    "Nivel 1": "Compuesto",
+    "Nivel 2": "Inorgánico",
+    "Nivel 3": "Binario",
+    "Nivel 4": "Sales binarias"
+  }
+}
