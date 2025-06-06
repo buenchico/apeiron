@@ -1,47 +1,60 @@
+const today = new Date()
+today.setHours(12, 0, 0, 0); // Sets time to 12:00 PM exactly
+
+function getRandomMateriaByDate(hash, date) {
+  // Convert date to a stable numeric value
+  const seed = date.getTime(); // Using timestamp for consistency
+
+  // Select a pseudo-random key
+  const keys = Object.keys(hash);
+  const selectedKey = keys[seed % keys.length]; // Consistent selection
+
+  // Return the materia object with the key as `symbol`
+  return { ...hash[selectedKey], symbol: selectedKey };
+}
+
+function findDeepestSharedLevel(selected_materia, target_materia) {
+  const levels = ["4", "3", "2", "1"];
+
+if (selected_materia.key === target_materia.key) {
+    return "yeah"
+  } else {
+    return "nope"
+  }
+
+  //return levels.find(level => obj1[level] === obj2[level]) || null;
+}
+
 fetch("data.json")
   .then(response => response.json()) // Parse JSON response
   .then(data => {
-    const keys = Object.keys(data); // Get all keys
-    const randomKey = keys[Math.floor(Math.random() * keys.length)]; // Select a random key
-    const targetElement = { ...data[randomKey], symbol: randomKey }; // Append key as "symbol"
-    const namesArray = Object.values(data).map(element => element["Nombre"]);
+    const target_materia = getRandomMateriaByDate(data, today);
+
+    console.log("taget materia:", target_materia); // Now includes "symbol"
+
+    $.each(data, function(key, value) {
+        $("#materia_names_data").append($("<option>").val(key).text(value["name_es"] + " (" + key + ")"));
+    });
+
     var round = 0
 
-    console.log(targetElement); // Now randomElement exists here
-
-    const datalist = document.getElementById("nombres");
-
-    namesArray.forEach(nombre => {
-        const option = document.createElement("option");
-        option.value = nombre;
-        datalist.appendChild(option);
-    });
-
     $("#submit").click(function() {
-      var selectedElement = $('#nombre').val()
-      const result = findElementByNombre(selectedElement);
+      var symbol = $('#materia_name').val()
+
+      const selected_materia = { ...data[symbol], symbol: symbol }
+
+      console.log("test materia:", selected_materia);
+
       round += 1
-      $('#try-' + round).html(JSON.stringify(result, null, 2))
-      const test = checkElementBySymbol(result["symbol"])
-      $('#try-' + round).append('<div style="margin-left: 10px">' + result[test] + '</div>')
+
+      //$('#try-' + round).html(JSON.stringify(result, null, 2))
+
+      const test = findDeepestSharedLevel(selected_materia, target_materia)
+
+      console.log(test)
+
+      //$('#try-' + round).append('<div style="margin-left: 10px">' + result[test] + '</div>')
     });
 
-    function findElementByNombre(nombre) {
-        const key = Object.keys(data).find(k => data[k]["Nombre"] === nombre);
-        return key ? { ...data[key], symbol: key } : null;
-    }
-
-    function checkElementBySymbol(symbol) {
-      console.log(targetElement)
-      const result = data[symbol];
-      console.log(result)
-
-      return findDeepestSharedLevel(targetElement, result)
-    }
-
-    function findDeepestSharedLevel(obj1, obj2) {
-      const levels = ["Nivel 4", "Nivel 3", "Nivel 2", "Nivel 1", "symbol"];
-      return levels.find(level => obj1[level] === obj2[level]) || null;
-    }
   })
   .catch(error => console.error("Error loading JSON:", error));
