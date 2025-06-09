@@ -1,126 +1,126 @@
 {
   "Li": {
     "name_es": "Litio",
-    "1": "Sustancia simple",
+    "1": "Elemento",
     "2": "Monoatómica",
     "3": "Sustancia metálica",
     "4": "Alcalino"
   },
   "Na": {
     "name_es": "Sodio",
-    "1": "Sustancia simple",
+    "1": "Elemento",
     "2": "Monoatómica",
     "3": "Sustancia metálica",
     "4": "Alcalino"
   },
   "Mg": {
     "name_es": "Magnesio",
-    "1": "Sustancia simple",
+    "1": "Elemento",
     "2": "Monoatómica",
     "3": "Sustancia metálica",
     "4": "Alcalinotérreo"
   },
   "Ca": {
     "name_es": "Calcio",
-    "1": "Sustancia simple",
+    "1": "Elemento",
     "2": "Monoatómica",
     "3": "Sustancia metálica",
     "4": "Alcalinotérreo"
   },
   "Fe": {
     "name_es": "Hierro",
-    "1": "Sustancia simple",
+    "1": "Elemento",
     "2": "Monoatómica",
     "3": "Sustancia metálica",
     "4": "Metal de transición"
   },
   "Cu": {
     "name_es": "Cobre",
-    "1": "Sustancia simple",
+    "1": "Elemento",
     "2": "Monoatómica",
     "3": "Sustancia metálica",
     "4": "Metal de transición"
   },
   "Al": {
     "name_es": "Aluminio",
-    "1": "Sustancia simple",
+    "1": "Elemento",
     "2": "Monoatómica",
     "3": "Sustancia metálica",
     "4": "Metal de transición"
   },
   "C": {
     "name_es": "Grafito, Diamante, Grafeno",
-    "1": "Sustancia simple",
+    "1": "Elemento",
     "2": "Monoatómica",
     "3": "Sustancia covalente reticular"
   },
   "He": {
     "name_es": "Helio",
-    "1": "Sustancia simple",
+    "1": "Elemento",
     "2": "Monoatómica",
     "3": "Gas noble"
   },
   "Ne": {
     "name_es": "Neón",
-    "1": "Sustancia simple",
+    "1": "Elemento",
     "2": "Monoatómica",
     "3": "Gas noble"
   },
   "Rn": {
     "name_es": "Radón",
-    "1": "Sustancia simple",
+    "1": "Elemento",
     "2": "Monoatómica",
     "3": "Gas noble"
   },
   "F2": {
     "name_es": "Diflúor",
-    "1": "Sustancia simple",
+    "1": "Elemento",
     "2": "Molecular",
     "3": "Diatómica",
     "4": "Halógenos"
   },
   "Cl2": {
     "name_es": "Dicloro",
-    "1": "Sustancia simple",
+    "1": "Elemento",
     "2": "Molecular",
     "3": "Diatómica",
     "4": "Halógenos"
   },
   "Br2": {
     "name_es": "Dibromo",
-    "1": "Sustancia simple",
+    "1": "Elemento",
     "2": "Molecular",
     "3": "Diatómica",
     "4": "Halógenos"
   },
   "I2": {
     "name_es": "Diyodo",
-    "1": "Sustancia simple",
+    "1": "Elemento",
     "2": "Molecular",
     "3": "Diatómica",
     "4": "Halógenos"
   },
   "H2": {
     "name_es": "Dihidrógeno",
-    "1": "Sustancia simple",
+    "1": "Elemento",
     "2": "Molecular",
     "3": "Diatómica"
   },
   "O2": {
     "name_es": "Dioxígeno",
-    "1": "Sustancia simple",
+    "1": "Elemento",
     "2": "Molecular",
     "3": "Diatómica"
   },
   "N2": {
     "name_es": "Dinitrógeno",
-    "1": "Sustancia simple",
+    "1": "Elemento",
     "2": "Molecular",
     "3": "Diatómica"
   },
   "O3": {
     "name_es": "Ozono",
-    "1": "Sustancia simple",
+    "1": "Elemento",
     "2": "Molecular",
     "3": "Poliatómica",
     "4": "Alótropo del oxígeno"

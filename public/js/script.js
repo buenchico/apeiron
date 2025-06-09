@@ -10,11 +10,11 @@ function getRandomMateriaByDate(hash, date) {
   const selectedKey = keys[seed % keys.length]; // Consistent selection
 
   // Return the materia object with the key as `symbol`
-  return { ...hash[selectedKey], symbol: selectedKey };
+  return { ...hash[selectedKey], symbol: selectedKey, "0": "Materia" };
 }
 
 function findDeepestSharedLevel(selected_materia, target_materia) {
-  const levels = ["symbol", "4", "3", "2", "1"];
+  const levels = ["symbol", "4", "3", "2", "1", "0"];
 
   return levels.find(level => selected_materia[level] === target_materia[level]) || null;
 }
@@ -26,6 +26,14 @@ fetch("data.json")
 
     console.log("taget materia:", target_materia); // Now includes "symbol"
 
+    const level1Values = new Set();
+
+    Object.values(data).forEach(obj => {
+      if (obj["3"]) level1Values.add(obj["3"]);
+    });
+
+    console.log([...level1Values]); // Output: ["Elemento"]
+
     $.each(data, function(key, value) {
         $("#materia_names_data").append($("<option>").val(key).text(value["name_es"] + " (" + key + ")"));
     });
@@ -35,7 +43,7 @@ fetch("data.json")
     $("#submit").click(function() {
       var symbol = $('#materia_name').val()
 
-      const selected_materia = { ...data[symbol], symbol: symbol }
+      const selected_materia = { ...data[symbol], symbol: symbol, "0": "Materia" }
 
       console.log("test materia:", selected_materia);
 
