@@ -10,10 +10,15 @@ app.set('views', path.join(__dirname, 'views')); // Ensure your views are stored
 // Serve static files (CSS, images, etc.)
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Define a route that renders an EJS template
+// Define routes that render different "main" content
 app.get('/', (req, res) => {
-    res.render('index', { title: 'Welcome to My Website' });
+    res.render('application', { title: 'Welcome to My Website', partial: 'index' });
 });
+
+app.get('/account', (req, res) => {
+    res.render('application', { title: 'Account Page', partil: 'account' });
+});
+
 
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}/`));
