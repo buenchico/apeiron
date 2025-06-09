@@ -53,5 +53,9 @@
 
       <%- include('layouts/footer') %>
       <!--#include file="footer.html" -->
+
+      <% if (process.env.ENVIRONMENT === 'development') { %>
+        <%- include('layouts/debug') %>
+      <% } %>
   </body>
 </html>

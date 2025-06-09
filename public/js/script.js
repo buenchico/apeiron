@@ -1,10 +1,8 @@
 const today = new Date()
 today.setHours(12, 0, 0, 0); // Sets time to 12:00 PM exactly
+const seed = today.getDate(); // Using local date for consistency
 
-function getRandomMateriaByDate(hash, date) {
-  // Convert date to a stable numeric value
-  const seed = date.getTime(); // Using timestamp for consistency
-
+function getRandomMateriaByDate(hash, seed) {
   // Select a pseudo-random key
   const keys = Object.keys(hash);
   const selectedKey = keys[seed % keys.length]; // Consistent selection
@@ -16,25 +14,26 @@ function getRandomMateriaByDate(hash, date) {
 function findDeepestSharedLevel(selected_materia, target_materia) {
   const levels = ["symbol", "4", "3", "2", "1", "0"];
 
-  return levels.find(level => selected_materia[level] === target_materia[level]) || null;
+  return levels.find(level =>
+    selected_materia[level] && target_materia[level] && selected_materia[level] === target_materia[level]
+  ) || null;
 }
+
 
 fetch("data.json")
   .then(response => response.json()) // Parse JSON response
   .then(data => {
-    const target_materia = getRandomMateriaByDate(data, today);
+    const target_materia = getRandomMateriaByDate(data, seed);
 
-    console.log("taget materia:", target_materia); // Now includes "symbol"
-
-    $("#target").html(JSON.stringify(target_materia))
+    $("#target").html(JSON.stringify(target_materia));
+    $("#date").html(today);
+    $("#seed").html(seed);
 
     const level1Values = new Set();
 
     Object.values(data).forEach(obj => {
       if (obj["3"]) level1Values.add(obj["3"]);
     });
-
-    console.log([...level1Values]); // Output: ["Elemento"]
 
     $.each(data, function(key, value) {
         $("#materia_names_data").append($("<option>").val(key).text(value["name_es"] + " (" + key + ")"));
