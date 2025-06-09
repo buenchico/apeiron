@@ -16,3 +16,10 @@
     </div>
   </nav>
 </footer>
+
+<% if (process.env.ENVIRONMENT === 'development') { %>
+  <div class="bg-warning-subtle">
+    <h3>Debug</h3>
+    Target <span id="target"></span>
+  <div>
+<% } %>

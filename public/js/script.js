@@ -26,6 +26,8 @@ fetch("data.json")
 
     console.log("taget materia:", target_materia); // Now includes "symbol"
 
+    $("#target").html(JSON.stringify(target_materia))
+
     const level1Values = new Set();
 
     Object.values(data).forEach(obj => {

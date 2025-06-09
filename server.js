@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const path = require('path');
 
@@ -20,5 +22,5 @@ app.get('/:partial', (req, res) => {
     res.render('application', { partial });
 });
 
-const PORT = 3000;
+const PORT = process.env.PORT;
 app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}/`));
