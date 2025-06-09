@@ -14,15 +14,9 @@ function getRandomMateriaByDate(hash, date) {
 }
 
 function findDeepestSharedLevel(selected_materia, target_materia) {
-  const levels = ["4", "3", "2", "1"];
+  const levels = ["symbol", "4", "3", "2", "1"];
 
-if (selected_materia.key === target_materia.key) {
-    return "yeah"
-  } else {
-    return "nope"
-  }
-
-  //return levels.find(level => obj1[level] === obj2[level]) || null;
+  return levels.find(level => selected_materia[level] === target_materia[level]) || null;
 }
 
 fetch("data.json")
@@ -47,13 +41,15 @@ fetch("data.json")
 
       round += 1
 
-      //$('#try-' + round).html(JSON.stringify(result, null, 2))
+      const result = findDeepestSharedLevel(selected_materia, target_materia)
 
-      const test = findDeepestSharedLevel(selected_materia, target_materia)
+      var msg_selected = "Has probado con " + selected_materia.name_es + " (" + selected_materia.symbol + ")"
+      var msg_result = "Comparte con la substancia misteriosa que ambas son " + target_materia[result]
 
-      console.log(test)
+      console.log(result)
 
-      //$('#try-' + round).append('<div style="margin-left: 10px">' + result[test] + '</div>')
+      $('#test-' + round).append('<div style="margin-left: 10px">' + msg_selected + '</div>')
+      $('#test-' + round).append('<div style="margin-left: 10px">' + msg_result + '</div>')
     });
 
   })

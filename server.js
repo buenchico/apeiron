@@ -12,13 +12,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Define routes that render different "main" content
 app.get('/', (req, res) => {
-    res.render('application', { title: 'Welcome to My Website', partial: 'index' });
+    res.render('application', { partial: 'game' });
 });
 
-app.get('/account', (req, res) => {
-    res.render('application', { title: 'Account Page', partil: 'account' });
+app.get('/:partial', (req, res) => {
+    const { partial } = req.params;
+    res.render('application', { partial });
 });
-
 
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}/`));
