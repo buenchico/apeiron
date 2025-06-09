@@ -12,6 +12,11 @@ app.set('views', path.join(__dirname, 'views')); // Ensure your views are stored
 // Serve static files (CSS, images, etc.)
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get("/script.js", (req, res) => {
+  res.setHeader("Content-Type", "application/javascript");
+  res.render("script", { environment: process.env.ENVIRONMENT });
+});
+
 // Define routes that render different "main" content
 app.get('/', (req, res) => {
     res.render('application', { partial: 'game' });

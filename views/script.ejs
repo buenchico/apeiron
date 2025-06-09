@@ -1,6 +1,5 @@
 const today = new Date()
-today.setHours(12, 0, 0, 0); // Sets time to 12:00 PM exactly
-const seed = today.getDate(); // Using local date for consistency
+const seed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
 
 function getRandomMateriaByDate(hash, seed) {
   // Select a pseudo-random key
@@ -29,12 +28,6 @@ fetch("data.json")
     $("#date").html(today);
     $("#seed").html(seed);
 
-    const level1Values = new Set();
-
-    Object.values(data).forEach(obj => {
-      if (obj["3"]) level1Values.add(obj["3"]);
-    });
-
     $.each(data, function(key, value) {
         $("#materia_names_data").append($("<option>").val(key).text(value["name_es"] + " (" + key + ")"));
     });
@@ -46,16 +39,16 @@ fetch("data.json")
 
       const selected_materia = { ...data[symbol], symbol: symbol, "0": "Materia" }
 
-      console.log("test materia:", selected_materia);
-
       round += 1
+
+      if ( '<%= process.env.ENVIRONMENT %>' === 'development') {
+        $('#debug').append("<p>Test #" + round + ": " + JSON.stringify(selected_materia) + "</p>")
+      }
 
       const result = findDeepestSharedLevel(selected_materia, target_materia)
 
       var msg_selected = "Has probado con " + selected_materia.name_es + " (" + selected_materia.symbol + ")"
       var msg_result = "Comparte con la substancia misteriosa que ambas son " + target_materia[result]
-
-      console.log(result)
 
       $('#test-' + round).append('<div style="margin-left: 10px">' + msg_selected + '</div>')
       $('#test-' + round).append('<div style="margin-left: 10px">' + msg_result + '</div>')
